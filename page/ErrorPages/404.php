@@ -5,4 +5,4 @@
  */
 
 // Include the default 404 page
-include(__DIR__ . "/../../include/Pages/ErrorPages/404.php");
+require_once(__DIR__ . "/../../include/Pages/ErrorPages/404.php");

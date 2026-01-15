@@ -6,4 +6,4 @@
  */
 
 // Include the default SHcms page loader
-include(__DIR__ . "/../include/Pages/index.php");
+require_once(__DIR__ . "/../include/Pages/index.php");
