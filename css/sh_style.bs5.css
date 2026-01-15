@@ -1,0 +1,104 @@
+/*
+	[1] - Modal-SideBar
+	[2] - BTN-Group Rounded Button 0
+	[3] - Model FullPage 
+	[4] - BTN - Transparent
+	[5] - Bootstrap 4.1 ang 4.5 problem 
+*/
+
+
+/*
+	[1] - Modal-Sidebar
+*/
+	@keyframes leftSidebar_animation {
+		from {left: -300px;}
+		to   {left: 0px;}
+	}
+	@keyframes rightSidebar_animation {
+		from {right: -300px;}
+		to   {right: 0px;}
+	}
+	.modal.leftSidebar{
+		
+	}
+	.modal.leftSidebar .modal-dialog,
+	.modal.rightSidebar .modal-dialog {
+		position: fixed; 
+		margin: auto;
+		width: 320px;
+		height: calc(100% - max(0px, env(safe-area-inset-top)));
+		margin-top: max(0px, env(safe-area-inset-top));
+	}
+	.modal.leftSidebar .modal-content,
+	.modal.rightSidebar .modal-content {
+		height: 100%;
+    	overflow-y: auto;
+    	border-radius: 0px;
+    	border:0px;
+	}
+	.modal.leftSidebar .modal-body,
+	.modal.rightSidebar .modal-body {
+    	padding: 0px; 
+	}
+	/* Left Sidebar */
+	.modal.leftSidebar.fade.in.show .modal-dialog{
+		left: 0px;
+	}
+	.modal.leftSidebar .modal-dialog{
+		animation: leftSidebar_animation 0.3s;
+	}
+	/* Right Sidebar */
+	.modal.rightSidebar.fade.in .modal-dialog {
+		right: 0px;
+	}  
+	.modal.rightSidebar .modal-dialog{
+		animation: rightSidebar_animation 0.3s;
+		right: 0px;
+	}
+	/* sumting for Button */ 
+	.modal.rightSidebar.fade.in .modal-dialog .btn-group-vertical .btn, .modal.rightSidebar.fade.in .modal-dialog .btn-group .btn{
+		border:1px solid #C0C0C0; 
+	}
+
+
+
+/*
+	[2] - BTN-Group Rounded Button 0
+*/
+/* Disable from Bootstrap 4 was
+	.btn-group-vertical.rounded-0 .btn, .btn-group.rounded-0 .btn{
+		border-radius: 0px;
+	}
+
+
+/*
+	[3] - Model FullPage 
+*/
+
+/* Disable from Bootstrap 4 was
+@media (max-width: 575.98px) { 
+	.modal-dialog.modal-page{ width:100%; height:100%; position: fixed; margin: auto; }
+	.modal-dialog.modal-page .modal-content{height:100%;  }
+ }
+
+
+/*
+	 [4] - BTN - Transparent
+*/
+
+.btn-transparent {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+/*
+	 [5] - Bootstrap Problem 
+*/
+/* Disable from Bootstrap 4 was
+.toast {
+	flex-basis: 30px;
+}

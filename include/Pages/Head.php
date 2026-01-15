@@ -1,0 +1,1 @@
+<base href="//<?php echo $_SERVER['HTTP_HOST']; ?>">
